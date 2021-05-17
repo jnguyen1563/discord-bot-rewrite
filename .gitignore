@@ -1,0 +1,23 @@
+# python virtual environment
+venv/
+
+# environment variables
+.env
+
+# testing files
+test.py
+test.ipynb
+test/
+
+# python bytecode
+__pycache__/
+.pyc
+
+# vscode settings
+.vscode/
+
+# planning
+plan.txt
+
+# databases
+databases/
