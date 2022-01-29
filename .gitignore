@@ -1,5 +1,6 @@
 # token config
 config.json
+.env
 
 # vscode settings
 .vscode/
