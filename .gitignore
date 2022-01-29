@@ -1,17 +1,5 @@
-# python virtual environment
-venv/
-
 # environment variables
 .env
-
-# testing files
-test.py
-test.ipynb
-test/
-
-# python bytecode
-__pycache__/
-.pyc
 
 # vscode settings
 .vscode/
@@ -19,5 +7,5 @@ __pycache__/
 # planning
 plan.txt
 
-# databases
-databases/
+# node modules
+node_modules/
