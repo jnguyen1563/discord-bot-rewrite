@@ -1,9 +1,22 @@
 const { Client, Intents } = require('discord.js');
-const { token } = require('../config.json');
+const dotenv = require('dotenv');
 
-const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
-client.once('ready', () => {
-  console.log('Bot is logged in');
+dotenv.config();
+
+const client = new Client({
+  intents: [Intents.FLAGS.GUIDS, Intents.FLAGS.GUILD_MESSAGES],
 });
 
-client.login(token);
+client.on('ready', () => {
+  console.log('Bot is ready');
+});
+
+client.on('messageCreate', (message: any) => {
+  if (message.content === 'ping') {
+    message.reply({
+      content: 'pong',
+    });
+  }
+});
+
+client.login(process.env.token);
