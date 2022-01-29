@@ -1,5 +1,9 @@
-const word = 'world';
+const { Client, Intents } = require('discord.js');
+const { token } = require('../config.json');
 
-export default function hello(world: string = word): string {
-  return `Hello ${world}!`;
-}
+const client = new Client({ intents: [Intents.FLAGS.GUIDS] });
+client.once('ready', () => {
+  console.log('Bot is logged in');
+});
+
+client.login(token);
