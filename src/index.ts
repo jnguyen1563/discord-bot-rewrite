@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const client = new Client({
-  intents: [Intents.FLAGS.GUIDS, Intents.FLAGS.GUILD_MESSAGES],
+  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
 
 client.on('ready', () => {
